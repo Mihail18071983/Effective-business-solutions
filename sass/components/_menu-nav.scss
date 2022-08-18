@@ -1,5 +1,43 @@
+
+
+.menu {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
 .menu {
   margin-left: 95px;
+  &__button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.menu__icon-cross,
+.menu__icon-menu {
+  .menu__button:hover &,
+  .menu__button:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.menu__button .menu__icon-cross {
+  display: none;
+}
+
+.menu__button.is-open .menu__icon-cross {
+  display: block;
+}
+
+.menu__button.is-open .menu__icon-menu {
+  display: none;
 }
 
 .page-header__container {

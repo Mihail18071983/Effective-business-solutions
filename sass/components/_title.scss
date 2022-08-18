@@ -1,9 +1,13 @@
 .section__title {
     color: var(--secondary-dark-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include fonts(28px, 700,33px);
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 50px;
+    @media screen and (min-width:769px) {
+    @include fonts(36px, 700, 42px);
+    }
 }
