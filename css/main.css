@@ -231,10 +231,10 @@ img {
   }
 }
 .hero__title {
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.3636363636;
-  width: 700px;
+  line-height: 1.6153846154;
+  width: 360px;
   letter-spacing: 0.06em;
   color: var(--main-light-color);
   text-transform: uppercase;
@@ -243,6 +243,14 @@ img {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3636363636;
+    width: 700px;
+  }
+}
 .section__title {
   color: var(--secondary-dark-color);
   font-weight: 700;
@@ -830,19 +838,24 @@ img {
 }
 .hero {
   background-color: var(--secondary-bc-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-image.jpg);
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/img/mobile/hero-mobile/hero-mobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1600px;
+  max-width: 767px;
   margin: 0 auto;
 }
 .hero > .container {
   text-align: center;
 }
 
+@media screen and (min-devise-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: url(../../image/img/mobile/hero-mobile/hero-mobile@2x.jpg);
+  }
+}
 .benefits {
   display: flex;
   justify-content: center;
