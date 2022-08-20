@@ -1,6 +1,14 @@
 .benefits {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &__item {
+    width: 270px;
+  }
+
   &__icon-wrapper {
-    max-width: 100%;
+    width: 270px;
     height: 120px;
     background-color: var(--second-light-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -9,7 +17,6 @@
     @extend %align;
   }
 
-  
   &__icon {
     width: 70px;
     height: 70px;
@@ -32,37 +39,3 @@
     color: var(--main-color);
   }
 }
-
-@media screen and (max-width:767px) {
-  .benefits__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  
-}
-
-
-
-  @media screen and (min-width: 768px) and (max-width:1199px) {
-    .benefits {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap:30px;
-    
-    &__item {
-      flex-basis: calc(50% - 60px);
-    }
-  }
-}
-
- 
-   
- @media screen and (min-width: 1200px) {
-  .benefits {
-   display: flex;
-   justify-content: center;
-   gap: 30px;
- }
-   }
-
- 

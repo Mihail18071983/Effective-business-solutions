@@ -1,33 +1,6 @@
 .clients-list {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .clients-list__item {
-    flex-basis: calc(100% / 2 - 30px);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .clients-list__item {
-    flex-basis: calc(100% / 3 - 30px);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .clients-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-
-    &__item {
-      flex-basis: calc(100% / 5 - 30px);
-    }
-  }
-
 }
 
 .clients-list__link {
@@ -35,7 +8,7 @@
     color var(--timing-duration) var(--timing-function);
   color: var(--icon-color);
   @extend %align;
-  max-width: 100%;
+  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
