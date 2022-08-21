@@ -1,7 +1,5 @@
 .hero {
   background-color: var(--secondary-bc-color);
-  padding-top: 118px;
-  padding-bottom: 118px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -24,14 +22,16 @@
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: url(../../image/img/mobile/hero-mobile/hero-mobile@2x.jpg);
-    
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(../../image/img/tablet/hero-tablet/hero-tablet.jpg);
-    
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -39,10 +39,7 @@
   screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: url(../../image/img/tablet/hero-tablet/hero-tablet@2x.jpg);
-    
   }
 }
 

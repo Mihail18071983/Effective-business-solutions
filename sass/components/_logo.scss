@@ -1,36 +1,25 @@
 
 
-
 .logo {
   font-family: var(--secondary-font-family);
-  @include fonts(26px, 700, 31px);
+  @include fonts(24px, 700, 28px);
   color: var(--main-dark-color);
   letter-spacing: 0.03em;
   display: block;
-
   &__accent {
     color: var(--accent-color);
   }
+
+    &--theme-dark {
+      color: var(--main-light-color);
+    }
+
 }
 
-@media screen and (max-width:1199px) {
+
+
+@media screen and (min-width: 1200px) {
   .logo {
-    @include fonts(24px, 700, 28px);
+    @include fonts(26px, 700, 31px);
   }
 }
-
-
-// .logo--theme-dark {
-//   color: var(--main-light-color);
-// }
-
-// .page-footer__logo {
-//   margin-bottom: 20px;
-// }
-
-// .logo {
-//   font-family: var(--secondary-font-family);
-//   @include fonts(26px, 700, 31px);
-//   color: var(--main-dark-color);
-//   letter-spacing: 0.03em;
-//   display: block;
