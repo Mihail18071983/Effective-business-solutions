@@ -18,7 +18,7 @@
     transition-duration: var(--timing-duration);
     transition-timing-function: var(--timing-function);
     font-family: var(--main-font-family);
-    @include fonts($weight: 500, $lh: 16px);
+    @include fonts(12px, 500, 14px);
     letter-spacing: 0.02em;
     color: var(--main-color);
     display: flex;
@@ -43,7 +43,9 @@
     flex-direction: row;
     gap: 30px;
   }
-  
+   .contacts__link {
+    @include fonts(14px, 500, 16px);
+   }
 }
 
 

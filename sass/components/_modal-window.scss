@@ -1,8 +1,9 @@
 .modal-window {
   @include сentering-xy_scailing();
   padding: 40px;
-  min-height: 581px;
-  width: 528px;
+  min-height: 609px;
+  width: 100%;
+  max-width: 450px;
   background-color: var(--main-light-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -10,6 +11,13 @@
   transition-property: transform, scale;
   transition-duration: var(--timing-duration);
   transition-timing-function: var(--timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    min-height: 581px;
+    width: 528px;
+  }
 }
 
 .modal-btn-close {

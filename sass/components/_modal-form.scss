@@ -96,15 +96,19 @@
 }
 
 .agreemeet-title {
-  @include fonts($lh: 24px);
+  @include fonts($size: 12px, $lh: 14px);
   letter-spacing: 0.03em;
   color: var(--main-color);
   user-select: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .agreemeet-title {
+    @include fonts($size: 14px, $lh: 24px);
+  }
+}
+
 .agreemeet-link {
-  @include fonts($lh: 24px);
-  letter-spacing: 0.03em;
   text-decoration-line: none;
   color: var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
