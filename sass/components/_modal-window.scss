@@ -50,3 +50,10 @@
     fill: var(--accent-color);
   }
 }
+
+@media screen and (max-height: 570px) {
+  .modal-window {
+    top: 20px;
+    transform: translate(-50%, 0) scale(1);
+  }
+}

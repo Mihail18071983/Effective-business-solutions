@@ -31,7 +31,7 @@
   margin: -1px;
 }
 
-.clients-list__link, .actyvity__wraper, .benefits__icon-wrapper, .form-check-desc, .modal-btn-close {
+.clients-list__link, .actyvity__wraper, .benefits__icon-wrapper, .modal-btn-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@ body {
   font-size: 16px;
 }
 
-body.modal-open {
+.modal-open {
   overflow: hidden;
 }
 
@@ -90,24 +90,23 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 .logo {
@@ -154,8 +153,8 @@ img {
     z-index: 1000;
     top: 0;
     left: 0;
+    overflow: scroll;
     background-color: var(--main-light-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px 100vmax rgba(0, 0, 0, 0.16);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -208,6 +207,10 @@ img {
   }
   .mobile-menu__link--сurrent {
     color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+  .mobile-menu__link:hover, .mobile-menu__link:focus {
+    color: #188ce8;
   }
   .mobile-contacts__link {
     font-size: 24px;
@@ -222,6 +225,19 @@ img {
     line-height: 1.1764705882;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+  }
+  .mobile-social__item {
+    position: relative;
+  }
+  .mobile-social__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
   }
   .mobile-social__link {
     font-size: 18px;
@@ -246,7 +262,7 @@ img {
   font-size: 26px;
   font-weight: 900;
   line-height: 1.6153846154;
-  width: 360px;
+  max-width: 360px;
   letter-spacing: 0.06em;
   color: var(--main-light-color);
   text-transform: uppercase;
@@ -260,7 +276,7 @@ img {
     font-size: 44px;
     font-weight: 900;
     line-height: 1.3636363636;
-    width: 700px;
+    max-width: 700px;
   }
 }
 .section__title {
@@ -513,6 +529,12 @@ img {
   fill: var(--accent-color);
 }
 
+@media screen and (max-height: 570px) {
+  .modal-window {
+    top: 20px;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
 .modal-form {
   margin: 0 auto;
   display: flex;
@@ -536,10 +558,6 @@ img {
 .modal-form__input:focus {
   outline: none;
   border: 1px solid var(--accent-color);
-}
-
-.modal-form__label--coment {
-  margin-bottom: 20px;
 }
 
 .modal-form__input--coment {
@@ -571,6 +589,10 @@ img {
 
 .modal-form__label {
   margin-bottom: 10px;
+}
+
+.modal-form__label--coment {
+  margin-bottom: 20px;
 }
 
 .modal-form__icon {
@@ -610,6 +632,9 @@ img {
 
 .form-check-desc {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .agreemeet-title {
@@ -619,6 +644,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-color);
   user-select: none;
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -637,13 +663,13 @@ img {
 .icon-check-wrapper {
   width: 16px;
   height: 15px;
+  min-width: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--secondary-dark-color);
   border-radius: 4px;
   background-color: var(--main-light-color);
-  margin-right: 7px;
   cursor: pointer;
   overflow: hidden;
 }
