@@ -39,7 +39,7 @@
 
     &--сurrent::after {
       position: absolute;
-      bottom: -1px;
+      bottom: -4px;
       left: 0;
       content: "";
       display: block;
@@ -51,9 +51,11 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width:1200px) {
   .menu {
     margin-left: 95px;
   }
-
+  .menu-list__link--сurrent::after {
+    bottom: -1px;
+  }
 }

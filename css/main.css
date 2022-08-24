@@ -326,7 +326,7 @@ img {
   }
   .menu-list__link--сurrent::after {
     position: absolute;
-    bottom: -1px;
+    bottom: -4px;
     left: 0;
     content: "";
     display: block;
@@ -339,6 +339,9 @@ img {
 @media screen and (min-width: 1200px) {
   .menu {
     margin-left: 95px;
+  }
+  .menu-list__link--сurrent::after {
+    bottom: -1px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -376,6 +379,14 @@ img {
     align-self: center;
     fill: currentColor;
   }
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
+  .contacts__icon--mail {
+    width: 14px;
+    height: 10px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
@@ -386,6 +397,14 @@ img {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.1428571429;
+  }
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
+  .contacts__icon--mail {
+    width: 16px;
+    height: 12px;
   }
 }
 .social-network {
@@ -630,6 +649,11 @@ img {
   align-items: baseline;
 }
 
+@media screen and (min-width: 768px) {
+  .form-check-desc {
+    align-items: center;
+  }
+}
 .agreemeet-title {
   font-size: 12px;
   font-weight: 400;
@@ -912,6 +936,7 @@ img {
   padding-top: 16px;
   padding-bottom: 16px;
   color: var(--main-color);
+  position: relative;
 }
 
 .page-header__container {

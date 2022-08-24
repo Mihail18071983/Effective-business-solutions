@@ -36,6 +36,17 @@
     align-self: center;
     fill: currentColor;
   }
+
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
+
+  .contacts__icon--mail {
+    width: 14px;
+    height: 10px;
+  }
+  
 }
 
 @media screen and (min-width:1200px) {
@@ -46,6 +57,17 @@
    .contacts__link {
     @include fonts(14px, 500, 16px);
    }
+
+ .contacts__icon--phone {
+   width: 10px;
+   height: 16px;
+ }
+
+ .contacts__icon--mail {
+   width: 16px;
+   height: 12px;
+ }
+
 }
 
 
