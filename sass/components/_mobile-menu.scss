@@ -1,27 +1,29 @@
 @media screen and (max-width: 767px) {
   .mobile-menu {
+    $timing-duration:1250ms;
     position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    top: 0;
-    left: 0;
+    top: -100vh;
+    left:0;
     overflow: scroll;
     background-color: var(--main-light-color);
-    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    //   0px 1px 3px 100vmax rgba(0, 0, 0, 0.16);
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--timing-duration) var(--timing-function),
-      visibility var(--timing-duration) var(--timing-function);
+    transition: transform $timing-duration var(--timing-function),
+      opacity $timing-duration var(--timing-function),
+      visibility $timing-duration var(--timing-function);
   }
 
   .mobile-menu.is-open {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+    transform: translateY(100vh);
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
+    pointer-events: initial;
   }
 
   .mobile-menu__container {
@@ -45,15 +47,7 @@
     line-height: 0;
   }
 
-  .mobile-menu-list {
-    margin-bottom: auto;
-  }
-
-  .mobile-contacts {
-    margin-bottom: 64px;
-  }
-
-  .mobile-contacts__item:not(:last-child) {
+   .mobile-contacts__item:not(:last-child) {
     margin-bottom: 32px;
   }
 
@@ -70,11 +64,7 @@
 
     &--сurrent {
       color: var(--accent-color);
-      border-bottom: 1px solid var(--accent-color);
-    }
-    
-    &:hover, &:focus {
-      color:#188ce8 ;
+      border-bottom: 4px solid var(--accent-color);
     }
   }
 
@@ -89,9 +79,9 @@
       color: var(--accent-color);
     }
   }
-     .mobile-social__item {
-      position: relative;
-     }
+  .mobile-social__item {
+    position: relative;
+  }
 
   .mobile-social__item:not(:last-child)::after {
     content: "";

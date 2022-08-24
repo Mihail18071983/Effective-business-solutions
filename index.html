@@ -45,7 +45,12 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="mobile-menu-open" data-menu-open>
+        <button
+          type="button"
+          class="mobile-menu-open"
+          aria-label="Кнопка открытия мобильного меню"
+          data-menu-open
+        >
           <svg class="mobile-menu-open__icon" width="40" height="40">
             <use href="./image/icons.svg#icon-menu_40px"></use>
           </svg>
@@ -72,7 +77,11 @@
 
       <div class="mobile-menu" data-menu>
         <div class="container mobile-menu__container">
-          <button class="mobile-menu__close-btn" data-menu-close>
+          <button
+            class="mobile-menu__close-btn"
+            aria-label="Кнока закрытия мобильного меню"
+            data-menu-close
+          >
             <svg class="mobile-menu__close-icon" width="40" height="40">
               <use href="./image/icons.svg#icon-close_40px"></use>
             </svg>
@@ -141,7 +150,7 @@
       <section class="section">
         <div class="container">
           <h2 class="section__title visually-hidden">Особенности</h2>
-          <ul class="benefits list">
+          <ul class="benefits">
             <li class="benefits__item">
               <div class="benefits__icon-wrapper">
                 <svg class="benefits__icon">
@@ -262,7 +271,7 @@
                   alt="working on planshet"
                 />
               </picture>
-              
+
               <div class="actyvity__wraper">
                 <p class="actyvity__label">Дизайнерские решения</p>
               </div>
@@ -708,9 +717,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span class="location"
-                    >г. Киев, пр-т Леси Украинки, 26</span
-                  >
+                  <span class="location">г. Киев, пр-т Леси Украинки, 26</span>
                 </a>
               </li>
               <li class="adress-list__item">
@@ -747,7 +754,7 @@
             <li class="social-network__item">
               <a
                 href=""
-                class="social-network__link  page-footer__social-network-link"
+                class="social-network__link page-footer__social-network-link"
               >
                 <svg class="social-network__icon">
                   <use href="./image/icons.svg#twitter"></use>
@@ -802,7 +809,7 @@
           </svg>
         </button>
 
-        <form  class="modal-form js-speaker-form">
+        <form class="modal-form js-speaker-form">
           <b class="modal-form__title"
             >Оставьте свои данные, мы вам перезвоним</b
           >
