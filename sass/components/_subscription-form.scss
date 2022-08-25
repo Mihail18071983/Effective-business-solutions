@@ -12,8 +12,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-light-color);
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -21,6 +19,10 @@
   .subscription {
     margin-left: auto;
     margin-right: auto;
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
