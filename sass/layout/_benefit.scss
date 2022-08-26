@@ -36,7 +36,10 @@
   .benefits__item:not(:last-child) {
     margin-bottom: 30px;
   }
-
+    
+  .benefits__title {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width:1199px) {
